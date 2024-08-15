@@ -13,4 +13,16 @@ void main() {
       expect(hideEmail('abcdefg@h.com'), 'abcd****@h.com');
     });
   });
+  group('AmountFieldValue', () {
+    test('...', () {
+      expect(AmountFieldValue('100').formatDecimals(3),'100');
+      expect(AmountFieldValue('100.123').formatDecimals(3),'100.123');
+      expect(AmountFieldValue('100.1234').formatDecimals(3),'100.123');
+      expect(AmountFieldValue('100.1230').formatDecimals(3),'100.123');
+      expect(AmountFieldValue('100.0001').formatDecimals(3),'100.000');
+      expect(AmountFieldValue('100.01').formatDecimals(3),'100.01');
+      expect(AmountFieldValue('100.').formatDecimals(0),'100');
+      expect(AmountFieldValue('100.034').formatDecimals(0),'100');
+    });
+    });
 }
