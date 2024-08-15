@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_drive/utils.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,7 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
   final myController = TextEditingController();
   void _printLatestValue() {
     final text = myController.text;
-    print('Second text field: $text (${text.characters.length})');
+    // print('Second text field: $text (${text.characters.length})');
+    var test = hideEmail(text);
+    print(test);
   }
 
   @override
@@ -80,6 +83,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
     // Start listening to changes.
     myController.addListener(_printLatestValue);
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the widget tree.
+    // This also removes the _printLatestValue listener.
+    myController.dispose();
+    super.dispose();
   }
 
   @override
