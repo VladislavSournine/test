@@ -348,11 +348,11 @@ td.barBg
 
      <tr>
      <td class="ItemLabel" width="10%">Date:</td>
-     <td class="ItemText" width="35%">2024-08-15 13:32:09.560374</td>
+     <td class="ItemText" width="35%">2024-08-15 14:15:41.768957</td>
      <td class="ItemLabel" width="10%">Mutations:</td>
-     <td class="ItemReport" width="15%">22</td>
-     <td class="ItemReport" width="15%">23</td>
-     <td class="ItemReportHigh" width="15%">95.7 %</td>
+     <td class="ItemReport" width="15%">25</td>
+     <td class="ItemReport" width="15%">27</td>
+     <td class="ItemReportHigh" width="15%">92.6 %</td>
      </tr>
      
      <tr>
@@ -360,7 +360,7 @@ td.barBg
      <td class="ItemText" width="35%">true</td>
      <td class="ItemLabel" width="10%">Blocked:</td>
      <td class="ItemReport" width="15%">0</td>
-     <td class="ItemReport" width="15%">23</td>
+     <td class="ItemReport" width="15%">27</td>
      <td class="ItemReportHigh" width="15%">0.0 %</td>
      </tr>
      </tbody>
@@ -514,6 +514,25 @@ td.barBg
 <a name="79"><span class="lineNumber">      79 </span>  }</a>
 <a name="80"><span class="lineNumber">      80 </span>}</a>
 <a name="81"><span class="lineNumber">      81 </span></a>
+<a name="82"><span class="lineNumber">      82 </span>String tapByPrecision(String value, int precision) {</a>
+<a name="83"><button class="collapsible problem"><pre class="fileContents"><span class="lineNumber">      83 </span>  if (value.length &lt;= precision) {</pre></button>
+<div class="content">
+<b>Undetected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">&lt;</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr></table>
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">==</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+  <span class="changedTokens"> if (!(value.length &lt;= precision)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
+
+</div></a><a name="84"><span class="lineNumber">      84 </span>    return value;</a>
+<a name="85"><span class="lineNumber">      85 </span>  }</a>
+<a name="86"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      86 </span>  return value.substring(0, precision);</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return<span class="changedTokens"> value.substring( precision,0);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="87"><span class="lineNumber">      87 </span>}</a>
 </pre>
 <script>
 var coll = document.getElementsByClassName("collapsible");

@@ -57,6 +57,20 @@ void main() {
       // Assert
       expect(result, equals('123'));
     });
+
+    test('..tapByPrecision..', () {
+      const value = '123';
+      const precision = 5;
+      final result = tapByPrecision(value, precision);
+      expect(result, equals('123'));
+    });
+
+    test('..tapByPrecision2..', () {
+      const value = '12312345';
+      const precision = 5;
+      final result = tapByPrecision(value, precision);
+      expect(result, equals('12312'));
+    });
   });
 
 }

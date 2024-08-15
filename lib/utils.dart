@@ -78,3 +78,10 @@ class AmountFieldValue {
     return 'TradeFieldValue($value)';
   }
 }
+
+String tapByPrecision(String value, int precision) {
+  if (value.length <= precision) {
+    return value;
+  }
+  return value.substring(0, precision);
+}
