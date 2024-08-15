@@ -348,19 +348,19 @@ td.barBg
 
      <tr>
      <td class="ItemLabel" width="10%">Date:</td>
-     <td class="ItemText" width="35%">2024-08-15 15:27:47.585622</td>
+     <td class="ItemText" width="35%">2024-08-15 15:57:48.541817</td>
      <td class="ItemLabel" width="10%">Mutations:</td>
-     <td class="ItemReport" width="15%">6</td>
-     <td class="ItemReport" width="15%">6</td>
+     <td class="ItemReport" width="15%">2</td>
+     <td class="ItemReport" width="15%">2</td>
      <td class="ItemReportHigh" width="15%">100.0 %</td>
      </tr>
      
      <tr>
      <td class="ItemLabel" width="10%">Builtin rules:</td>
-     <td class="ItemText" width="35%">false</td>
+     <td class="ItemText" width="35%">true</td>
      <td class="ItemLabel" width="10%">Blocked:</td>
      <td class="ItemReport" width="15%">0</td>
-     <td class="ItemReport" width="15%">6</td>
+     <td class="ItemReport" width="15%">2</td>
      <td class="ItemReportHigh" width="15%">0.0 %</td>
      </tr>
      </tbody>
@@ -442,13 +442,8 @@ td.barBg
 <a name="65"><span class="lineNumber">      65 </span>      // so that the display can reflect the updated values. If we changed</a>
 <a name="66"><span class="lineNumber">      66 </span>      // _counter without calling setState(), then the build method would not be</a>
 <a name="67"><span class="lineNumber">      67 </span>      // called again, and so nothing would appear to happen.</a>
-<a name="68"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      68 </span>      _counter++;</pre></button>
-<div class="content">
-<b>Detected mutations:</b>
-<table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter<span class="changedTokens">-</span>+;</span></td><td class="match">+</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter<span class="changedTokens">*</span>+;</span></td><td class="match">+</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">3 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter<span class="changedTokens">/</span>+;</span></td><td class="match">+</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">4 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter+<span class="changedTokens">-</span>;</span></td><td class="match">+</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">5 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter+<span class="changedTokens">*</span>;</span></td><td class="match">+</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">6 :</td><td class="mutationText" width="87%"><span class="addedLine">+       _counter+<span class="changedTokens">/</span>;</span></td><td class="match">+</td></tr></table>
-
-</div></a><a name="69"><span class="lineNumber">      69 </span>    });</a>
+<a name="68"><span class="lineNumber">      68 </span>      _counter++;</a>
+<a name="69"><span class="lineNumber">      69 </span>    });</a>
 <a name="70"><span class="lineNumber">      70 </span>  }</a>
 <a name="71"><span class="lineNumber">      71 </span></a>
 <a name="72"><span class="lineNumber">      72 </span>  final myController = TextEditingController();</a>
@@ -533,8 +528,17 @@ td.barBg
 <a name="151"><span class="lineNumber">     151 </span>      floatingActionButton: FloatingActionButton(</a>
 <a name="152"><span class="lineNumber">     152 </span>        onPressed: _incrementCounter,</a>
 <a name="153"><span class="lineNumber">     153 </span>        tooltip: 'Increment',</a>
-<a name="154"><span class="lineNumber">     154 </span>        child: const Icon(Icons.add),</a>
-<a name="155"><span class="lineNumber">     155 </span>      ), // This trailing comma makes auto-formatting nicer for build methods.</a>
+<a name="154"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">     154 </span>        child: const Icon(Icons.add),</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+         child: const<span class="changedTokens"> Icon(
+      ),Icons.add), // This trailing comma makes auto-formatting nicer for build methods.
+    );</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^\(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg3</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+         child: const<span class="changedTokens"> Icon(Icons.add), // This trailing comma makes auto-formatting nicer for build methods.
+    ,
+      ));</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^\(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg3</span></td></tr></table>
+
+</div></a><a name="155"><span class="lineNumber">     155 </span>      ), // This trailing comma makes auto-formatting nicer for build methods.</a>
 <a name="156"><span class="lineNumber">     156 </span>    );</a>
 <a name="157"><span class="lineNumber">     157 </span>  }</a>
 <a name="158"><span class="lineNumber">     158 </span>}</a>

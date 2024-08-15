@@ -45,39 +45,39 @@ String hideEmail(String email) {
 
 
 
-class AmountFieldValue {
-  final String value;
-
-  AmountFieldValue(this.value);
-
-  String formatDecimals(int precision) {
-    final splitValue = value.split('.');
-    if (splitValue.length == 1) {
-      return value;
-    }
-    if (precision == 0) {
-      return splitValue[0];
-    }
-
-    final decimals = splitValue[1];
-    final newDecimals = decimals.map((value) => cutByPrecision(value, precision));
-
-    return '${splitValue[0]}.$newDecimals';
-  }
-
-  @visibleForTesting
-  String cutByPrecision(String value, int precision) {
-    if (value.length <= precision) {
-      return value;
-    }
-    return value.substring(0, precision);
-  }
-
-  @override
-  String toString() {
-    return 'TradeFieldValue($value)';
-  }
-}
+// class AmountFieldValue {
+//   final String value;
+//
+//   AmountFieldValue(this.value);
+//
+//   String formatDecimals(int precision) {
+//     final splitValue = value.split('.');
+//     if (splitValue.length == 1) {
+//       return value;
+//     }
+//     if (precision == 0) {
+//       return splitValue[0];
+//     }
+//
+//     final decimals = splitValue[1];
+//     final newDecimals = decimals.map((value) => cutByPrecision(value, precision));
+//
+//     return '${splitValue[0]}.$newDecimals';
+//   }
+//
+//   @visibleForTesting
+//   String cutByPrecision(String value, int precision) {
+//     if (value.length <= precision) {
+//       return value;
+//     }
+//     return value.substring(0, precision);
+//   }
+//
+//   @override
+//   String toString() {
+//     return 'TradeFieldValue($value)';
+//   }
+// }
 
 String tapByPrecision(String value, int precision) {
   if (value.length <= precision) {

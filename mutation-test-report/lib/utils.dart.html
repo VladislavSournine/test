@@ -348,19 +348,19 @@ td.barBg
 
      <tr>
      <td class="ItemLabel" width="10%">Date:</td>
-     <td class="ItemText" width="35%">2024-08-15 15:27:47.584449</td>
+     <td class="ItemText" width="35%">2024-08-15 15:57:48.539702</td>
      <td class="ItemLabel" width="10%">Mutations:</td>
-     <td class="ItemReport" width="15%">19</td>
-     <td class="ItemReport" width="15%">19</td>
-     <td class="ItemReportHigh" width="15%">100.0 %</td>
+     <td class="ItemReport" width="15%">25</td>
+     <td class="ItemReport" width="15%">27</td>
+     <td class="ItemReportHigh" width="15%">92.6 %</td>
      </tr>
      
      <tr>
      <td class="ItemLabel" width="10%">Builtin rules:</td>
-     <td class="ItemText" width="35%">false</td>
+     <td class="ItemText" width="35%">true</td>
      <td class="ItemLabel" width="10%">Blocked:</td>
      <td class="ItemReport" width="15%">0</td>
-     <td class="ItemReport" width="15%">19</td>
+     <td class="ItemReport" width="15%">27</td>
      <td class="ItemReportHigh" width="15%">0.0 %</td>
      </tr>
      </tbody>
@@ -393,19 +393,29 @@ td.barBg
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 == null <span class="changedTokens">&amp;&amp;</span> v2 == null) {</span></td><td class="match">||</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 <span class="changedTokens">!=</span> null || v2 == null) {</span></td><td class="match">==</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">3 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 == null || v2 <span class="changedTokens">!=</span> null) {</span></td><td class="match">==</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 == null <span class="changedTokens">&amp;&amp;</span> v2 == null) {</span></td><td class="match">||<span class="tooltip">Id: builtin.or</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 <span class="changedTokens">!=</span> null || v2 == null) {</span></td><td class="match">==<span class="tooltip">Id: builtin.op.eq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">3 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 == null || v2 <span class="changedTokens">!=</span> null) {</span></td><td class="match">==<span class="tooltip">Id: builtin.op.eq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">4 :</td><td class="mutationText" width="87%"><span class="addedLine">+  <span class="changedTokens"> if (!(v1 == null || v2 == null)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">5 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if <span class="changedTokens">(!(v1 == null )|| v2 == null)</span> {</span></td><td class="match">RegExp: pattern=\(([^|(]*?)\|\|([^()|]*?)\) flags=m<span class="tooltip">Id: builtin.logical.or_chain2</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">6 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if <span class="changedTokens">(v1 == null ||!( v2 == null))</span> {</span></td><td class="match">RegExp: pattern=\(([^|(]*?)\|\|([^()|]*?)\) flags=m<span class="tooltip">Id: builtin.logical.or_chain2</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">7 :</td><td class="mutationText" width="87%"><span class="addedLine">+   <span class="changedTokens">if (!(v1 == null )||</span> v2 == null) {</span></td><td class="match">RegExp: pattern=if\s*\(([^|&\)]*?)([|&][|&]) flags=m<span class="tooltip">Id: builtin.if.start</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">8 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (v1 == null <span class="changedTokens">||!( v2 == null))</span> {</span></td><td class="match">RegExp: pattern=([|&][|&])([^|&]*?)\) flags=m<span class="tooltip">Id: builtin.if.end</span></td></tr></table>
 
 </div></a><a name="16"><span class="lineNumber">      16 </span>    return null;</a>
 <a name="17"><span class="lineNumber">      17 </span>  }</a>
 <a name="18"><span class="lineNumber">      18 </span></a>
-<a name="19"><span class="lineNumber">      19 </span>  return action(v1, v2);</a>
-<a name="20"><span class="lineNumber">      20 </span>}</a>
+<a name="19"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      19 </span>  return action(v1, v2);</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return<span class="changedTokens"> action( v2,v1);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="20"><span class="lineNumber">      20 </span>}</a>
 <a name="21"><span class="lineNumber">      21 </span></a>
 <a name="22"><span class="lineNumber">      22 </span></a>
 <a name="23"><span class="lineNumber">      23 </span></a>
 <a name="24"><span class="lineNumber">      24 </span>String hideEmail(String email) {</a>
-<a name="25"><span class="lineNumber">      25 </span>  if (!email.contains('@')) {</a>
-<a name="26"><span class="lineNumber">      26 </span>    return '@.com';</a>
+<a name="25"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      25 </span>  if (!email.contains('@')) {</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+  <span class="changedTokens"> if (!(!email.contains('@'))) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
+
+</div></a><a name="26"><span class="lineNumber">      26 </span>    return '@.com';</a>
 <a name="27"><span class="lineNumber">      27 </span>  }</a>
 <a name="28"><span class="lineNumber">      28 </span>  assert(email.contains('@'));</a>
 <a name="29"><span class="lineNumber">      29 </span></a>
@@ -419,19 +429,24 @@ td.barBg
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   final halfLength = (namePart.length <span class="changedTokens">*</span> 2).ceil();</span></td><td class="match">/</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   final halfLength = (namePart.length <span class="changedTokens">+</span> 2).ceil();</span></td><td class="match">/</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   final halfLength = (namePart.length <span class="changedTokens">* </span>2).ceil();</span></td><td class="match">RegExp: pattern=/([^=]) flags=m<span class="tooltip">Id: builtin.arith.div</span></td></tr></table>
 
 </div></a><a name="37"><span class="lineNumber">      37 </span></a>
 <a name="38"><span class="lineNumber">      38 </span>  // print('halfLength - ${halfLength}');</a>
 <a name="39"><span class="lineNumber">      39 </span></a>
 <a name="40"><span class="lineNumber">      40 </span></a>
-<a name="41"><span class="lineNumber">      41 </span>  final visiblePart = namePart.substring(0, halfLength);</a>
-<a name="42"><span class="lineNumber">      42 </span></a>
+<a name="41"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      41 </span>  final visiblePart = namePart.substring(0, halfLength);</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   final visiblePart =<span class="changedTokens"> namePart.substring( halfLength,0);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="42"><span class="lineNumber">      42 </span></a>
 <a name="43"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      43 </span>  return '$visiblePart****@$domainPart';</pre></button>
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart<span class="changedTokens">+</span>***@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart<span class="changedTokens">-</span>***@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">3 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart*<span class="changedTokens">+</span>**@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">4 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart*<span class="changedTokens">-</span>**@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">5 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart**<span class="changedTokens">+</span>*@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">6 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart**<span class="changedTokens">-</span>*@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">7 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart***<span class="changedTokens">+</span>@$domainPart';</span></td><td class="match">*</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">8 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart***<span class="changedTokens">-</span>@$domainPart';</span></td><td class="match">*</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart<span class="changedTokens">/*</span>**@$domainPart';</span></td><td class="match">RegExp: pattern=\*([^=]) flags=m<span class="tooltip">Id: builtin.arith.mul</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return '$visiblePart**<span class="changedTokens">/*</span>@$domainPart';</span></td><td class="match">RegExp: pattern=\*([^=]) flags=m<span class="tooltip">Id: builtin.arith.mul</span></td></tr></table>
 
 </div></a><a name="44"><span class="lineNumber">      44 </span>}</a>
 <a name="45"><span class="lineNumber">      45 </span></a>
@@ -448,7 +463,7 @@ td.barBg
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (splitValue.length <span class="changedTokens">!=</span> 1) {</span></td><td class="match">==</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (splitValue.length <span class="changedTokens">!=</span> 1) {</span></td><td class="match">==<span class="tooltip">Id: builtin.op.eq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+    <span class="changedTokens"> if (!(splitValue.length == 1)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
 
 </div></a><a name="56"><span class="lineNumber">      56 </span>      return value;</a>
 <a name="57"><span class="lineNumber">      57 </span>    }</a>
@@ -456,29 +471,42 @@ td.barBg
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (precision <span class="changedTokens">!=</span> 0) {</span></td><td class="match">==</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (precision <span class="changedTokens">!=</span> 0) {</span></td><td class="match">==<span class="tooltip">Id: builtin.op.eq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+    <span class="changedTokens"> if (!(precision == 0)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
 
 </div></a><a name="59"><span class="lineNumber">      59 </span>      return splitValue[0];</a>
 <a name="60"><span class="lineNumber">      60 </span>    }</a>
 <a name="61"><span class="lineNumber">      61 </span></a>
 <a name="62"><span class="lineNumber">      62 </span>    final decimals = splitValue[1];</a>
-<a name="63"><span class="lineNumber">      63 </span>    final newDecimals = decimals.map((value) =&gt; cutByPrecision(value, precision));</a>
-<a name="64"><span class="lineNumber">      64 </span></a>
+<a name="63"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      63 </span>    final newDecimals = decimals.map((value) =&gt; cutByPrecision(value, precision));</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     final newDecimals = decimals.map((value) =&gt;<span class="changedTokens"> cutByPrecision( precision),value);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="64"><span class="lineNumber">      64 </span></a>
 <a name="65"><span class="lineNumber">      65 </span>    return '${splitValue[0]}.$newDecimals';</a>
 <a name="66"><span class="lineNumber">      66 </span>  }</a>
 <a name="67"><span class="lineNumber">      67 </span></a>
 <a name="68"><span class="lineNumber">      68 </span>  @visibleForTesting</a>
 <a name="69"><span class="lineNumber">      69 </span>  String cutByPrecision(String value, int precision) {</a>
-<a name="70"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      70 </span>    if (value.length &lt;= precision) {</pre></button>
+<a name="70"><button class="collapsible problem"><pre class="fileContents"><span class="lineNumber">      70 </span>    if (value.length &lt;= precision) {</pre></button>
 <div class="content">
+<b>Undetected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (value.length <span class="changedTokens">&lt;</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr></table>
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (value.length <span class="changedTokens">==</span> precision) {</span></td><td class="match"><=</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (value.length <span class="changedTokens">&gt;</span> precision) {</span></td><td class="match"><=</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     if (value.length <span class="changedTokens">==</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+    <span class="changedTokens"> if (!(value.length &lt;= precision)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
 
 </div></a><a name="71"><span class="lineNumber">      71 </span>      return value;</a>
 <a name="72"><span class="lineNumber">      72 </span>    }</a>
-<a name="73"><span class="lineNumber">      73 </span>    return value.substring(0, precision);</a>
-<a name="74"><span class="lineNumber">      74 </span>  }</a>
+<a name="73"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      73 </span>    return value.substring(0, precision);</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+     return<span class="changedTokens"> value.substring( precision,0);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="74"><span class="lineNumber">      74 </span>  }</a>
 <a name="75"><span class="lineNumber">      75 </span></a>
 <a name="76"><span class="lineNumber">      76 </span>  @override</a>
 <a name="77"><span class="lineNumber">      77 </span>  String toString() {</a>
@@ -487,16 +515,24 @@ td.barBg
 <a name="80"><span class="lineNumber">      80 </span>}</a>
 <a name="81"><span class="lineNumber">      81 </span></a>
 <a name="82"><span class="lineNumber">      82 </span>String tapByPrecision(String value, int precision) {</a>
-<a name="83"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      83 </span>  if (value.length &lt;= precision) {</pre></button>
+<a name="83"><button class="collapsible problem"><pre class="fileContents"><span class="lineNumber">      83 </span>  if (value.length &lt;= precision) {</pre></button>
 <div class="content">
+<b>Undetected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">&lt;</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr></table>
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
-<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">==</span> precision) {</span></td><td class="match"><=</td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">&gt;</span> precision) {</span></td><td class="match"><=</td></tr></table>
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   if (value.length <span class="changedTokens">==</span> precision) {</span></td><td class="match"><=<span class="tooltip">Id: builtin.op.leq</span></td></tr><tr><td colspan="3"><hr class="ruler"/></td></tr><tr><td class="mutationLabel" width="5%">2 :</td><td class="mutationText" width="87%"><span class="addedLine">+  <span class="changedTokens"> if (!(value.length &lt;= precision)) {</span></span></td><td class="match">RegExp: pattern=[\s]if[\s]*\((.*?)\)[\s]*{ flags=ms<span class="tooltip">Id: builtin.if</span></td></tr></table>
 
 </div></a><a name="84"><span class="lineNumber">      84 </span>    return value;</a>
 <a name="85"><span class="lineNumber">      85 </span>  }</a>
-<a name="86"><span class="lineNumber">      86 </span>  return value.substring(0, precision);</a>
-<a name="87"><span class="lineNumber">      87 </span>}</a>
+<a name="86"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">      86 </span>  return value.substring(0, precision);</pre></button>
+<div class="content">
+<b>Detected mutations:</b>
+<table class="mutationTable" width="100%">
+<tr><td class="mutationLabel" width="5%">1 :</td><td class="mutationText" width="87%"><span class="addedLine">+   return<span class="changedTokens"> value.substring( precision,0);</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg2</span></td></tr></table>
+
+</div></a><a name="87"><span class="lineNumber">      87 </span>}</a>
 </pre>
 <script>
 var coll = document.getElementsByClassName("collapsible");
