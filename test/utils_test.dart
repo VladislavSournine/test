@@ -25,4 +25,38 @@ void main() {
       expect(AmountFieldValue('100.034').formatDecimals(0),'100');
     });
     });
+  group('cutByPrecision', () {
+    test('returns the value unchanged if its length is less than or equal to precision', () {
+      final amount = AmountFieldValue('123.345542');
+      expect(amount.formatDecimals(3), equals('123.345'));
+    });
+
+    test('returns the value cut to the specified precision', () {
+      final amount = AmountFieldValue('123.345542');
+      expect(amount.formatDecimals(0), equals('123'));
+    });
+
+    test('returns the value unchanged if precision is greater than length', () {
+      final amount = AmountFieldValue('123.34');
+      expect(amount.formatDecimals(5), equals('123.34'));
+    });
+
+    test('returns the value unchanged if precision is greater than length', () {
+      final amount = AmountFieldValue('123.3');
+      expect(amount.cutByPrecision('123',5), equals('123'));
+    });
+
+    test('...', () {
+      const value = '123'; // length is 3
+      const precision = 5; // precision is greater than the length
+
+      // Act
+      final amount = AmountFieldValue(value);
+      final result = amount.cutByPrecision(value, precision);
+
+      // Assert
+      expect(result, equals('123'));
+    });
+  });
+
 }

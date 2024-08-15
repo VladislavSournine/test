@@ -1,3 +1,5 @@
+import 'package:meta/meta.dart';
+
 extension ObjectExt<T> on T {
   R let<R>(R Function(T value) action) => action(this);
 
@@ -58,12 +60,13 @@ class AmountFieldValue {
     }
 
     final decimals = splitValue[1];
-    final newDecimals = decimals.map((value) => _cutByPrecision(value, precision));
+    final newDecimals = decimals.map((value) => cutByPrecision(value, precision));
 
     return '${splitValue[0]}.$newDecimals';
   }
 
-  String _cutByPrecision(String value, int precision) {
+  @visibleForTesting
+  String cutByPrecision(String value, int precision) {
     if (value.length <= precision) {
       return value;
     }
