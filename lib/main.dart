@@ -71,10 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final myController = TextEditingController();
   void _printLatestValue() {
-    final text = myController.text;
+    // final text = myController.text;
     // print('Second text field: $text (${text.characters.length})');
-    var test = hideEmail(text);
-    print(test);
   }
 
   @override

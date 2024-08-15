@@ -348,7 +348,7 @@ td.barBg
 
      <tr>
      <td class="ItemLabel" width="10%">Date:</td>
-     <td class="ItemText" width="35%">2024-08-15 15:57:48.541817</td>
+     <td class="ItemText" width="35%">2024-08-15 16:25:16.567814</td>
      <td class="ItemLabel" width="10%">Mutations:</td>
      <td class="ItemReport" width="15%">2</td>
      <td class="ItemReport" width="15%">2</td>
@@ -448,87 +448,85 @@ td.barBg
 <a name="71"><span class="lineNumber">      71 </span></a>
 <a name="72"><span class="lineNumber">      72 </span>  final myController = TextEditingController();</a>
 <a name="73"><span class="lineNumber">      73 </span>  void _printLatestValue() {</a>
-<a name="74"><span class="lineNumber">      74 </span>    final text = myController.text;</a>
+<a name="74"><span class="lineNumber">      74 </span>    // final text = myController.text;</a>
 <a name="75"><span class="lineNumber">      75 </span>    // print('Second text field: $text (${text.characters.length})');</a>
-<a name="76"><span class="lineNumber">      76 </span>    var test = hideEmail(text);</a>
-<a name="77"><span class="lineNumber">      77 </span>    print(test);</a>
-<a name="78"><span class="lineNumber">      78 </span>  }</a>
-<a name="79"><span class="lineNumber">      79 </span></a>
-<a name="80"><span class="lineNumber">      80 </span>  @override</a>
-<a name="81"><span class="lineNumber">      81 </span>  void initState() {</a>
-<a name="82"><span class="lineNumber">      82 </span>    super.initState();</a>
-<a name="83"><span class="lineNumber">      83 </span></a>
-<a name="84"><span class="lineNumber">      84 </span>    // Start listening to changes.</a>
-<a name="85"><span class="lineNumber">      85 </span>    myController.addListener(_printLatestValue);</a>
-<a name="86"><span class="lineNumber">      86 </span>  }</a>
-<a name="87"><span class="lineNumber">      87 </span></a>
-<a name="88"><span class="lineNumber">      88 </span>  @override</a>
-<a name="89"><span class="lineNumber">      89 </span>  void dispose() {</a>
-<a name="90"><span class="lineNumber">      90 </span>    // Clean up the controller when the widget is removed from the widget tree.</a>
-<a name="91"><span class="lineNumber">      91 </span>    // This also removes the _printLatestValue listener.</a>
-<a name="92"><span class="lineNumber">      92 </span>    myController.dispose();</a>
-<a name="93"><span class="lineNumber">      93 </span>    super.dispose();</a>
-<a name="94"><span class="lineNumber">      94 </span>  }</a>
-<a name="95"><span class="lineNumber">      95 </span></a>
-<a name="96"><span class="lineNumber">      96 </span>  @override</a>
-<a name="97"><span class="lineNumber">      97 </span>  Widget build(BuildContext context) {</a>
-<a name="98"><span class="lineNumber">      98 </span>    // This method is rerun every time setState is called, for instance as done</a>
-<a name="99"><span class="lineNumber">      99 </span>    // by the _incrementCounter method above.</a>
-<a name="100"><span class="lineNumber">     100 </span>    //</a>
-<a name="101"><span class="lineNumber">     101 </span>    // The Flutter framework has been optimized to make rerunning build methods</a>
-<a name="102"><span class="lineNumber">     102 </span>    // fast, so that you can just rebuild anything that needs updating rather</a>
-<a name="103"><span class="lineNumber">     103 </span>    // than having to individually change instances of widgets.</a>
-<a name="104"><span class="lineNumber">     104 </span></a>
-<a name="105"><span class="lineNumber">     105 </span>    return Scaffold(</a>
-<a name="106"><span class="lineNumber">     106 </span>      appBar: AppBar(</a>
-<a name="107"><span class="lineNumber">     107 </span>        // TRY THIS: Try changing the color here to a specific color (to</a>
-<a name="108"><span class="lineNumber">     108 </span>        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar</a>
-<a name="109"><span class="lineNumber">     109 </span>        // change color while the other colors stay the same.</a>
-<a name="110"><span class="lineNumber">     110 </span>        backgroundColor: Theme.of(context).colorScheme.inversePrimary,</a>
-<a name="111"><span class="lineNumber">     111 </span>        // Here we take the value from the MyHomePage object that was created by</a>
-<a name="112"><span class="lineNumber">     112 </span>        // the App.build method, and use it to set our appbar title.</a>
-<a name="113"><span class="lineNumber">     113 </span>        title: Text(widget.title),</a>
-<a name="114"><span class="lineNumber">     114 </span>      ),</a>
-<a name="115"><span class="lineNumber">     115 </span>      body: Center(</a>
-<a name="116"><span class="lineNumber">     116 </span>        // Center is a layout widget. It takes a single child and positions it</a>
-<a name="117"><span class="lineNumber">     117 </span>        // in the middle of the parent.</a>
-<a name="118"><span class="lineNumber">     118 </span>        child: Column(</a>
-<a name="119"><span class="lineNumber">     119 </span>          // Column is also a layout widget. It takes a list of children and</a>
-<a name="120"><span class="lineNumber">     120 </span>          // arranges them vertically. By default, it sizes itself to fit its</a>
-<a name="121"><span class="lineNumber">     121 </span>          // children horizontally, and tries to be as tall as its parent.</a>
-<a name="122"><span class="lineNumber">     122 </span>          //</a>
-<a name="123"><span class="lineNumber">     123 </span>          // Column has various properties to control how it sizes itself and</a>
-<a name="124"><span class="lineNumber">     124 </span>          // how it positions its children. Here we use mainAxisAlignment to</a>
-<a name="125"><span class="lineNumber">     125 </span>          // center the children vertically; the main axis here is the vertical</a>
-<a name="126"><span class="lineNumber">     126 </span>          // axis because Columns are vertical (the cross axis would be</a>
-<a name="127"><span class="lineNumber">     127 </span>          // horizontal).</a>
-<a name="128"><span class="lineNumber">     128 </span>          //</a>
-<a name="129"><span class="lineNumber">     129 </span>          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"</a>
-<a name="130"><span class="lineNumber">     130 </span>          // action in the IDE, or press "p" in the console), to see the</a>
-<a name="131"><span class="lineNumber">     131 </span>          // wireframe for each widget.</a>
-<a name="132"><span class="lineNumber">     132 </span>          mainAxisAlignment: MainAxisAlignment.center,</a>
-<a name="133"><span class="lineNumber">     133 </span>          children: &lt;Widget&gt;[</a>
-<a name="134"><span class="lineNumber">     134 </span>            TextField(</a>
-<a name="135"><span class="lineNumber">     135 </span>              controller: myController,</a>
-<a name="136"><span class="lineNumber">     136 </span>              decoration: const InputDecoration(</a>
-<a name="137"><span class="lineNumber">     137 </span>                border: OutlineInputBorder(),</a>
-<a name="138"><span class="lineNumber">     138 </span>                labelText: 'Text',</a>
-<a name="139"><span class="lineNumber">     139 </span>              ),</a>
-<a name="140"><span class="lineNumber">     140 </span>            ),</a>
-<a name="141"><span class="lineNumber">     141 </span>            const Text(</a>
-<a name="142"><span class="lineNumber">     142 </span>              'You have pushed the button this many times:',</a>
-<a name="143"><span class="lineNumber">     143 </span>            ),</a>
-<a name="144"><span class="lineNumber">     144 </span>            Text(</a>
-<a name="145"><span class="lineNumber">     145 </span>              '$_counter',</a>
-<a name="146"><span class="lineNumber">     146 </span>              style: Theme.of(context).textTheme.headlineMedium,</a>
-<a name="147"><span class="lineNumber">     147 </span>            ),</a>
-<a name="148"><span class="lineNumber">     148 </span>          ],</a>
-<a name="149"><span class="lineNumber">     149 </span>        ),</a>
-<a name="150"><span class="lineNumber">     150 </span>      ),</a>
-<a name="151"><span class="lineNumber">     151 </span>      floatingActionButton: FloatingActionButton(</a>
-<a name="152"><span class="lineNumber">     152 </span>        onPressed: _incrementCounter,</a>
-<a name="153"><span class="lineNumber">     153 </span>        tooltip: 'Increment',</a>
-<a name="154"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">     154 </span>        child: const Icon(Icons.add),</pre></button>
+<a name="76"><span class="lineNumber">      76 </span>  }</a>
+<a name="77"><span class="lineNumber">      77 </span></a>
+<a name="78"><span class="lineNumber">      78 </span>  @override</a>
+<a name="79"><span class="lineNumber">      79 </span>  void initState() {</a>
+<a name="80"><span class="lineNumber">      80 </span>    super.initState();</a>
+<a name="81"><span class="lineNumber">      81 </span></a>
+<a name="82"><span class="lineNumber">      82 </span>    // Start listening to changes.</a>
+<a name="83"><span class="lineNumber">      83 </span>    myController.addListener(_printLatestValue);</a>
+<a name="84"><span class="lineNumber">      84 </span>  }</a>
+<a name="85"><span class="lineNumber">      85 </span></a>
+<a name="86"><span class="lineNumber">      86 </span>  @override</a>
+<a name="87"><span class="lineNumber">      87 </span>  void dispose() {</a>
+<a name="88"><span class="lineNumber">      88 </span>    // Clean up the controller when the widget is removed from the widget tree.</a>
+<a name="89"><span class="lineNumber">      89 </span>    // This also removes the _printLatestValue listener.</a>
+<a name="90"><span class="lineNumber">      90 </span>    myController.dispose();</a>
+<a name="91"><span class="lineNumber">      91 </span>    super.dispose();</a>
+<a name="92"><span class="lineNumber">      92 </span>  }</a>
+<a name="93"><span class="lineNumber">      93 </span></a>
+<a name="94"><span class="lineNumber">      94 </span>  @override</a>
+<a name="95"><span class="lineNumber">      95 </span>  Widget build(BuildContext context) {</a>
+<a name="96"><span class="lineNumber">      96 </span>    // This method is rerun every time setState is called, for instance as done</a>
+<a name="97"><span class="lineNumber">      97 </span>    // by the _incrementCounter method above.</a>
+<a name="98"><span class="lineNumber">      98 </span>    //</a>
+<a name="99"><span class="lineNumber">      99 </span>    // The Flutter framework has been optimized to make rerunning build methods</a>
+<a name="100"><span class="lineNumber">     100 </span>    // fast, so that you can just rebuild anything that needs updating rather</a>
+<a name="101"><span class="lineNumber">     101 </span>    // than having to individually change instances of widgets.</a>
+<a name="102"><span class="lineNumber">     102 </span></a>
+<a name="103"><span class="lineNumber">     103 </span>    return Scaffold(</a>
+<a name="104"><span class="lineNumber">     104 </span>      appBar: AppBar(</a>
+<a name="105"><span class="lineNumber">     105 </span>        // TRY THIS: Try changing the color here to a specific color (to</a>
+<a name="106"><span class="lineNumber">     106 </span>        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar</a>
+<a name="107"><span class="lineNumber">     107 </span>        // change color while the other colors stay the same.</a>
+<a name="108"><span class="lineNumber">     108 </span>        backgroundColor: Theme.of(context).colorScheme.inversePrimary,</a>
+<a name="109"><span class="lineNumber">     109 </span>        // Here we take the value from the MyHomePage object that was created by</a>
+<a name="110"><span class="lineNumber">     110 </span>        // the App.build method, and use it to set our appbar title.</a>
+<a name="111"><span class="lineNumber">     111 </span>        title: Text(widget.title),</a>
+<a name="112"><span class="lineNumber">     112 </span>      ),</a>
+<a name="113"><span class="lineNumber">     113 </span>      body: Center(</a>
+<a name="114"><span class="lineNumber">     114 </span>        // Center is a layout widget. It takes a single child and positions it</a>
+<a name="115"><span class="lineNumber">     115 </span>        // in the middle of the parent.</a>
+<a name="116"><span class="lineNumber">     116 </span>        child: Column(</a>
+<a name="117"><span class="lineNumber">     117 </span>          // Column is also a layout widget. It takes a list of children and</a>
+<a name="118"><span class="lineNumber">     118 </span>          // arranges them vertically. By default, it sizes itself to fit its</a>
+<a name="119"><span class="lineNumber">     119 </span>          // children horizontally, and tries to be as tall as its parent.</a>
+<a name="120"><span class="lineNumber">     120 </span>          //</a>
+<a name="121"><span class="lineNumber">     121 </span>          // Column has various properties to control how it sizes itself and</a>
+<a name="122"><span class="lineNumber">     122 </span>          // how it positions its children. Here we use mainAxisAlignment to</a>
+<a name="123"><span class="lineNumber">     123 </span>          // center the children vertically; the main axis here is the vertical</a>
+<a name="124"><span class="lineNumber">     124 </span>          // axis because Columns are vertical (the cross axis would be</a>
+<a name="125"><span class="lineNumber">     125 </span>          // horizontal).</a>
+<a name="126"><span class="lineNumber">     126 </span>          //</a>
+<a name="127"><span class="lineNumber">     127 </span>          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"</a>
+<a name="128"><span class="lineNumber">     128 </span>          // action in the IDE, or press "p" in the console), to see the</a>
+<a name="129"><span class="lineNumber">     129 </span>          // wireframe for each widget.</a>
+<a name="130"><span class="lineNumber">     130 </span>          mainAxisAlignment: MainAxisAlignment.center,</a>
+<a name="131"><span class="lineNumber">     131 </span>          children: &lt;Widget&gt;[</a>
+<a name="132"><span class="lineNumber">     132 </span>            TextField(</a>
+<a name="133"><span class="lineNumber">     133 </span>              controller: myController,</a>
+<a name="134"><span class="lineNumber">     134 </span>              decoration: const InputDecoration(</a>
+<a name="135"><span class="lineNumber">     135 </span>                border: OutlineInputBorder(),</a>
+<a name="136"><span class="lineNumber">     136 </span>                labelText: 'Text',</a>
+<a name="137"><span class="lineNumber">     137 </span>              ),</a>
+<a name="138"><span class="lineNumber">     138 </span>            ),</a>
+<a name="139"><span class="lineNumber">     139 </span>            const Text(</a>
+<a name="140"><span class="lineNumber">     140 </span>              'You have pushed the button this many times:',</a>
+<a name="141"><span class="lineNumber">     141 </span>            ),</a>
+<a name="142"><span class="lineNumber">     142 </span>            Text(</a>
+<a name="143"><span class="lineNumber">     143 </span>              '$_counter',</a>
+<a name="144"><span class="lineNumber">     144 </span>              style: Theme.of(context).textTheme.headlineMedium,</a>
+<a name="145"><span class="lineNumber">     145 </span>            ),</a>
+<a name="146"><span class="lineNumber">     146 </span>          ],</a>
+<a name="147"><span class="lineNumber">     147 </span>        ),</a>
+<a name="148"><span class="lineNumber">     148 </span>      ),</a>
+<a name="149"><span class="lineNumber">     149 </span>      floatingActionButton: FloatingActionButton(</a>
+<a name="150"><span class="lineNumber">     150 </span>        onPressed: _incrementCounter,</a>
+<a name="151"><span class="lineNumber">     151 </span>        tooltip: 'Increment',</a>
+<a name="152"><button class="collapsible hit"><pre class="fileContents"><span class="lineNumber">     152 </span>        child: const Icon(Icons.add),</pre></button>
 <div class="content">
 <b>Detected mutations:</b>
 <table class="mutationTable" width="100%">
@@ -538,11 +536,11 @@ td.barBg
     ,
       ));</span></span></td><td class="match">RegExp: pattern=([\s][a-zA-Z]+?[^\(;\s{}]*?)\s*\(([^,:;{}(]+?),([^,:;{}(]+?),([^,:;{}(]+?)\)\s*; flags=m<span class="tooltip">Id: builtin.function.arg3</span></td></tr></table>
 
-</div></a><a name="155"><span class="lineNumber">     155 </span>      ), // This trailing comma makes auto-formatting nicer for build methods.</a>
-<a name="156"><span class="lineNumber">     156 </span>    );</a>
-<a name="157"><span class="lineNumber">     157 </span>  }</a>
-<a name="158"><span class="lineNumber">     158 </span>}</a>
-<a name="159"><span class="lineNumber">     159 </span></a>
+</div></a><a name="153"><span class="lineNumber">     153 </span>      ), // This trailing comma makes auto-formatting nicer for build methods.</a>
+<a name="154"><span class="lineNumber">     154 </span>    );</a>
+<a name="155"><span class="lineNumber">     155 </span>  }</a>
+<a name="156"><span class="lineNumber">     156 </span>}</a>
+<a name="157"><span class="lineNumber">     157 </span></a>
 </pre>
 <script>
 var coll = document.getElementsByClassName("collapsible");
